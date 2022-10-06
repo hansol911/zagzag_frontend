@@ -1,0 +1,101 @@
+.login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../public/img/pink-g43246378d_1920.jpg);
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 280px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.title {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #121116;
+  font-size: 3rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.idContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.pwContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.forgetContainer {
+  margin-left: 100px;
+}
+
+.itemName {
+  font-size: x-small;
+}
+
+.id {
+  background-image: url(../public/img/id.png);
+  background-position: 3px center;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  width: 180px;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  font-size: x-small;
+  text-indent: 10px;
+}
+
+.id:focus {
+  background-image: none;
+}
+
+.pw {
+  background-image: url(../public/img/padlock.png);
+  background-position: 3px center;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  width: 180px;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  font-size: x-small;
+  text-indent: 10px;
+}
+
+.pw:focus {
+  background-image: none;
+}
+
+.loginBtn {
+  width: 180px;
+  height: 30px;
+  margin: 50px 20px 0px 20px;
+  background-color: #121116;
+  border: 1px solid #121116;
+  border-radius: 20px;
+  color: white;
+  font-size: x-small;
+}
