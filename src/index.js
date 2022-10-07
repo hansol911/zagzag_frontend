@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Login from "./Login";
-import Main from "./Main";
-import "./reset.css";
-import "./common.css";
+import Router from "./Router";
+import "./reset.scss";
+import "./common.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Main />);
+root.render(<Router />);
