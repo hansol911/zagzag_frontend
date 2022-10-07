@@ -1,0 +1,84 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  @include flexCenter();
+  width: 100vw;
+  height: 100vh;
+
+  .mainContainer {
+    @include flexCenter();
+    flex-direction: column;
+
+    .gnbContainer {
+      @include flexCenter();
+      width: 100vw;
+      margin-top: 100px;
+
+      .logoContainer {
+        @include flexCenter();
+        margin: 30px 100px;
+
+        .logoImage {
+          width: 40px;
+        }
+
+        .logoName {
+          margin: 10px;
+          color: #121116;
+          font-size: 2rem;
+          font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        }
+      }
+
+      .searchContainer {
+        width: 500px;
+      }
+
+      .cartContainer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 5px;
+
+        .cartImage {
+          width: 40px;
+        }
+      }
+
+      .userContainer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-left: 5px;
+        margin-right: 100px;
+
+        .userImage {
+          width: 30px;
+        }
+      }
+    }
+
+    .menuContainer {
+      display: flex;
+      justify-content: center;
+      margin: 20px 60px;
+
+      .menu {
+        margin: 10px 30px;
+      }
+    }
+
+    .imageContainer {
+      display: flex;
+
+      .mainImage {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
