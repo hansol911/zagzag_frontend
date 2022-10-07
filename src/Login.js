@@ -1,6 +1,12 @@
-import "./Login.css";
+import { useNavigate } from "react-router-dom";
+import "./Login.scss";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const clickLoginBtn = () => {
+    navigate("/main");
+  };
+
   return (
     <div className="login">
       <h1 className="title">ZAGZAG</h1>
@@ -26,7 +32,9 @@ const Login = () => {
             <span className="itemName">Forget password?</span>
           </div>
         </div>
-        <button className="loginBtn">LOGIN</button>
+        <button className="loginBtn" onClick={clickLoginBtn}>
+          LOGIN
+        </button>
       </div>
     </div>
   );
