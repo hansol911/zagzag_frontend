@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Link from "./Link";
 import "./Login.scss";
 
 const Login = () => {
@@ -39,7 +38,6 @@ const Login = () => {
             <span className="itemName">Forget password?</span>
           </div>
         </div>
-        <Link count={count} name="hansol" age={30} />
         <button onClick={plusCount}>click</button>
         <button className="loginBtn" onClick={clickLoginBtn}>
           LOGIN
