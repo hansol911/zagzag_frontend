@@ -1,10 +1,17 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Link from "./Link";
 import "./Login.scss";
 
 const Login = () => {
   const navigate = useNavigate();
+  let [count, setCount] = useState(0);
   const clickLoginBtn = () => {
     navigate("/main");
+  };
+
+  const plusCount = () => {
+    setCount(++count);
   };
 
   return (
@@ -32,6 +39,8 @@ const Login = () => {
             <span className="itemName">Forget password?</span>
           </div>
         </div>
+        <Link count={count} />
+        <button onClick={plusCount}>click</button>
         <button className="loginBtn" onClick={clickLoginBtn}>
           LOGIN
         </button>
