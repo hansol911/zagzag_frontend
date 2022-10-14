@@ -4,20 +4,20 @@ import "./Login.scss";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [id, setId] = useState("");
-  const [pw, setPw] = useState("");
+  const [auth, setAuth] = useState({
+    id: "",
+    pw: "",
+  });
+
   const exactAuth = { id: "hansol", pw: "1234" };
 
-  const changeId = (inputId) => {
-    setId(inputId);
-  };
-
-  const changePw = (inputPw) => {
-    setPw(inputPw);
+  const changeAuth = (e) => {
+    const { name, value } = e.target;
+    setAuth({ ...auth, [name]: value });
   };
 
   const clickLoginBtn = () => {
-    if (id === exactAuth.id && pw === exactAuth.pw) {
+    if (auth.id === exactAuth.id && auth.pw === exactAuth.pw) {
       alert("ok");
       navigate("/main");
     } else {
@@ -36,7 +36,8 @@ const Login = () => {
               className="id"
               type="text"
               placeholder="아이디를 입력해주세요."
-              onChange={(e) => changeId(e.target.value)}
+              name="id"
+              onChange={changeAuth}
             />
           </div>
           <div className="pwContainer">
@@ -45,7 +46,8 @@ const Login = () => {
               className="pw"
               type="password"
               placeholder="비밀번호를 입력해주세요."
-              onChange={(e) => changePw(e.target.value)}
+              name="pw"
+              onChange={changeAuth}
             />
           </div>
           <div className="forgetContainer">
