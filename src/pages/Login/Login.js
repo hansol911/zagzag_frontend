@@ -4,13 +4,25 @@ import "./Login.scss";
 
 const Login = () => {
   const navigate = useNavigate();
-  let [count, setCount] = useState(0);
-  const clickLoginBtn = () => {
-    navigate("/main");
+  const [id, setId] = useState("");
+  const [pw, setPw] = useState("");
+  const exactAuth = { id: "hansol", pw: "1234" };
+
+  const changeId = (inputId) => {
+    setId(inputId);
   };
 
-  const plusCount = () => {
-    setCount(++count);
+  const changePw = (inputPw) => {
+    setPw(inputPw);
+  };
+
+  const clickLoginBtn = () => {
+    if (id === exactAuth.id && pw === exactAuth.pw) {
+      alert("ok");
+      navigate("/main");
+    } else {
+      alert("failed!!");
+    }
   };
 
   return (
@@ -24,6 +36,7 @@ const Login = () => {
               className="id"
               type="text"
               placeholder="아이디를 입력해주세요."
+              onChange={(e) => changeId(e.target.value)}
             />
           </div>
           <div className="pwContainer">
@@ -32,13 +45,13 @@ const Login = () => {
               className="pw"
               type="password"
               placeholder="비밀번호를 입력해주세요."
+              onChange={(e) => changePw(e.target.value)}
             />
           </div>
           <div className="forgetContainer">
             <span className="itemName">Forget password?</span>
           </div>
         </div>
-        <button onClick={plusCount}>click</button>
         <button className="loginBtn" onClick={clickLoginBtn}>
           LOGIN
         </button>
