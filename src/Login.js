@@ -39,7 +39,7 @@ const Login = () => {
             <span className="itemName">Forget password?</span>
           </div>
         </div>
-        <Link count={count} />
+        <Link count={count} name="hansol" age={30} />
         <button onClick={plusCount}>click</button>
         <button className="loginBtn" onClick={clickLoginBtn}>
           LOGIN
