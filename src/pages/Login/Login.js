@@ -31,20 +31,9 @@ const Login = () => {
       <h1 className="title">ZAGZAG</h1>
       <div className="loginContainer">
         <div className="inputContainer">
-          <UserInput
-            title="username"
-            name="id"
-            type="text"
-            placeholder="아이디를 입력해주세요."
-            changeAuth={changeAuth}
-          />
-          <UserInput
-            title="password"
-            name="pw"
-            type="password"
-            placeholder="비밀번호를 입력해주세요."
-            changeAuth={changeAuth}
-          />
+          {USER_INFO.map(info => {
+            return <UserInput info={info} changeAuth={changeAuth} />;
+          })}
           <div className="forgetContainer">
             <span className="itemName">Forget password?</span>
           </div>
@@ -58,3 +47,18 @@ const Login = () => {
 };
 
 export default Login;
+
+const USER_INFO = [
+  {
+    title: 'username',
+    name: 'id',
+    type: 'text',
+    placeholder: '아이디를 입력해주세요.',
+  },
+  {
+    title: 'password',
+    name: 'pw',
+    type: 'password',
+    placeholder: '비밀번호를 입력해주세요.',
+  },
+];
