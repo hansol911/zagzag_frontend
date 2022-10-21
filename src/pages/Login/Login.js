@@ -13,7 +13,7 @@ const Login = () => {
 
   const changeAuth = (e) => {
     const { name, value } = e.target;
-    setAuth({ ...auth, [name]: value });
+    setAuth((prev) => ({ ...prev, [name]: value }));
   };
 
   const clickLoginBtn = () => {
