@@ -1,0 +1,47 @@
+.idContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+
+  .id {
+    background-image: url(../../../../public/img/id.png);
+    background-position: 3px center;
+    background-size: 10px;
+    background-repeat: no-repeat;
+    width: 180px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    font-size: x-small;
+    text-indent: 10px;
+
+    &:focus {
+      background-image: none;
+    }
+  }
+}
+
+.pwContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+
+  .pw {
+    background-image: url(../../../../public/img/padlock.png);
+    background-position: 3px center;
+    background-size: 10px;
+    background-repeat: no-repeat;
+    width: 180px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    font-size: x-small;
+    text-indent: 10px;
+
+    &:focus {
+      background-image: none;
+    }
+  }
+}

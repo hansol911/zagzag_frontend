@@ -1,4 +1,5 @@
 import React from 'react';
+import './UserInput.scss';
 
 const UserInput = ({
   info: { title, name, type, placeholder },
