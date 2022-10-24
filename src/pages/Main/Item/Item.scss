@@ -1,0 +1,56 @@
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  .imageContainer {
+    .itemImage {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+
+    .companyContainer {
+      width: 200px;
+      padding-top: 5px;
+
+      .company {
+        font-size: xx-small;
+        color: darkgray;
+      }
+    }
+
+    .titleContainer {
+      width: 200px;
+      padding: 1px 0px;
+
+      .title {
+        display: inline-block;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: small;
+      }
+    }
+
+    .priceContainer {
+      padding-top: 5px;
+
+      .sale {
+        font-size: medium;
+        font-weight: bolder;
+        color: burlywood;
+      }
+
+      .price {
+        font-size: medium;
+        font-weight: bolder;
+      }
+    }
+  }
+}
