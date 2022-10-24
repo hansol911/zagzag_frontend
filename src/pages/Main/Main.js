@@ -1,5 +1,6 @@
 import Item from './Item/Item';
 import './Main.scss';
+import Menu from './Menu/Menu';
 
 const Login = () => {
   return (
@@ -19,13 +20,9 @@ const Login = () => {
           </div>
         </div>
         <div className="menuContainer">
-          <span className="menu">투데이</span>
-          <span className="menu">베스트</span>
-          <span className="menu">브랜드</span>
-          <span className="menu">쇼핑몰</span>
-          <span className="menu">뷰티</span>
-          <span className="menu">라이프</span>
-          <span className="menu">세일</span>
+          {MENUS.map(menu => {
+            return <Menu menu={menu} />;
+          })}
         </div>
         <div className="itemsContainer">
           {ITEMS.map(item => {
@@ -96,5 +93,29 @@ const ITEMS = [
     title: 'EXC 2WAY 후드 집업 (멜란지그레이)',
     sale: '5%',
     price: '37,100',
+  },
+];
+
+const MENUS = [
+  {
+    menu: '투데이',
+  },
+  {
+    menu: '베스트',
+  },
+  {
+    menu: '브랜드',
+  },
+  {
+    menu: '쇼핑몰',
+  },
+  {
+    menu: '뷰티',
+  },
+  {
+    menu: '라이프',
+  },
+  {
+    menu: '세일',
   },
 ];
